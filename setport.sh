@@ -33,6 +33,7 @@ Set_config_port(){
 	echo $((${ssr_port}+0)) &>/dev/null
 	if [[ $? == 0 ]]; then
 		if [[ ${ssr_port} -ge 1 ]] && [[ ${ssr_port} -le 65535 ]]; then
+			port=`${jq_file} '.server_port' ${config_user_file}`
 			echo && echo ${Separator_1} && echo -e "	端口 : ${Green_font_prefix}${ssr_port}${Font_color_suffix}" && echo ${Separator_1} && echo
 			break
 		else
@@ -80,7 +81,7 @@ Restart_SSR(){
 	[[ ! -z ${PID} ]] && /etc/init.d/ssr stop
 	/etc/init.d/ssr start
 	check_pid
-	[[ ! -z ${PID} ]] && View_User
+	[[ ! -z ${PID} ]]
 }
 
 # start
