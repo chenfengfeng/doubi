@@ -72,8 +72,10 @@ Save_iptables(){
 }
 
 # 重启服务
+check_pid(){
+	PID=`ps -ef |grep -v grep | grep server.py |awk '{print $2}'`
+}
 Restart_SSR(){
-	SSR_installation_status
 	check_pid
 	[[ ! -z ${PID} ]] && /etc/init.d/ssr stop
 	/etc/init.d/ssr start
