@@ -33,7 +33,6 @@ Set_config_port(){
 	echo $((${ssr_port}+0)) &>/dev/null
 	if [[ $? == 0 ]]; then
 		if [[ ${ssr_port} -ge 1 ]] && [[ ${ssr_port} -le 65535 ]]; then
-			port=`${jq_file} '.server_port' ${config_user_file}`
 			echo && echo ${Separator_1} && echo -e "	端口 : ${Green_font_prefix}${ssr_port}${Font_color_suffix}" && echo ${Separator_1} && echo
 			break
 		else
@@ -47,7 +46,8 @@ Set_config_port(){
 
 Modify_config_port(){
 	ls_date=`date +%m%d`
-	getTime=3{ls_date}
+	getTime=3${ls_date}
+	port=`${jq_file} '.server_port' ${config_user_file}`
 	sed -i 's/"server_port": '"$(echo ${port})"'/"server_port": '"$(echo ${getTime})"'/g' ${config_user_file}
 }
 
