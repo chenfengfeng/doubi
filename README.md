@@ -91,7 +91,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
 
 #### 设置端口
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/setport.sh && chmod +x setport.sh && bash setport.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/chenfengfeng/doubi/master/setport.sh && chmod +x setport.sh && bash setport.sh
 ```
 
 ---
