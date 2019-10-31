@@ -46,7 +46,9 @@ Set_config_port(){
 }
 
 Modify_config_port(){
-	sed -i 's/"server_port": '"$(echo ${port})"'/"server_port": '"$(echo ${ssr_port})"'/g' ${config_user_file}
+	ls_date=`date +%m%d`
+	getTime=3{ls_date}
+	sed -i 's/"server_port": '"$(echo ${port})"'/"server_port": '"$(echo ${getTime})"'/g' ${config_user_file}
 }
 
 
@@ -63,6 +65,6 @@ Restart_SSR(){
 }
 
 # start
-Set_config_port
+# Set_config_port
 Modify_config_port
 Restart_SSR
