@@ -47,4 +47,4 @@ Modify_config_port
 Restart_SSR
 
 # 调用API
-curl "http://ffhub.top/api/port.php?host=${ip}&port=${getTime}"
+curl -k "https://ffhub.top/api/port.php?host=${ip}&port=${getTime}"
