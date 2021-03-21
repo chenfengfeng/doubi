@@ -84,6 +84,11 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
 - 支持 一键安装 BBR
 - 支持 一键封禁 垃圾邮件(SMAP)/BT/PT
 
+#### 安装libsodium：
+```bash
+wget -N --no-check-certificate https://raw.githubusercontent.com/whunt1/onekeymakelibsodium/master/libsodium.sh && chmod +x libsodium.sh && bash libsodium.sh
+```
+
 #### 下载安装:
 ``` bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/chenfengfeng/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
