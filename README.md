@@ -83,6 +83,11 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/chenfengfeng/do
 wget -N --no-check-certificate https://raw.githubusercontent.com/chenfengfeng/doubi/master/setport.sh && chmod +x setport.sh && bash setport.sh
 ```
 
+#### BBR
+``` bash
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+```
+
 ---
 
 ## ss_go.sh
